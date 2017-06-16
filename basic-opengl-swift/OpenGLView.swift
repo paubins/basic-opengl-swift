@@ -39,7 +39,7 @@ class OpenGLView: NSOpenGLView
         /* BUG: When exiting a fullscreen view windowClosing() will be called. */
         NotificationCenter.default.addObserver( self, selector: #selector( OpenGLView.windowClosing ),
                                                           name: NSNotification.Name.NSWindowWillClose,
-                                                        object: nil )
+                                                        object: self.window )
     }
     
     
